@@ -25,24 +25,24 @@ public class Application {
     @Value("${rest.api.base.path}")
     private String restApiBasePath;
 
-//    public static void main(String[] args) {
-//        SpringApplication.run(Application.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+//    private static final String FFMPEG_LIBRARY_NAME = "opencv_ffmpeg340_64";
+//    static {
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+//        System.loadLibrary(FFMPEG_LIBRARY_NAME);
 //    }
 
-    private static final String FFMPEG_LIBRARY_NAME = "opencv_ffmpeg340_64";
-    static {
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        System.loadLibrary(FFMPEG_LIBRARY_NAME);
-    }
-
-    public static void main(String[] args) {
-        ImageFaceDetector detector = new AWSImageFaceDetectorAdapter();
-        ImageFaceBlur imageFaceBlur = new ImageFaceBlur(detector);
-        imageFaceBlur.processAndSave("backend/input.jpg", "backend/ouput.jpg");
-
-        //OpenCVVideoDetection detection = new OpenCVVideoDetection(imageFaceBlur);
-        //detection.process("video.avi", "ouput.avi");
-    }
+//    public static void main(String[] args) {
+//        ImageFaceDetector detector = new AWSImageFaceDetectorAdapter();
+//        ImageFaceBlur imageFaceBlur = new ImageFaceBlur(detector);
+//        imageFaceBlur.processAndSave("backend/input.jpg", "backend/ouput.jpg");
+//
+//        //OpenCVVideoDetection detection = new OpenCVVideoDetection(imageFaceBlur);
+//        //detection.process("video.avi", "ouput.avi");
+//    }
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
