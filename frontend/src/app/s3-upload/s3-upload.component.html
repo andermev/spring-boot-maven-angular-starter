@@ -1,0 +1,11 @@
+<div class="form">
+  <div class="form-group">
+    <label class="col-xs-2">select file</label>
+    <div class="col-xs-10">
+      <input type="file" (change)="upload($event)">
+    </div>
+  </div>
+</div>
+<div class="debug_print">
+  <p>httpUploadProgress {{ httpUploadProgress | json }}</p>
+</div>

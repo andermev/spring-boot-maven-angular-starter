@@ -1,0 +1,13 @@
+<div class="form">
+  <div class="form-group">
+    <label class="col-xs-2">select file</label>
+    <div class="col-xs-10">
+      <video width="800" [src] = "cameraSrc" controls>
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+</div>
+<div class="debug_print">
+  <p>httpUploadProgress {{ httpUploadProgress | json }}</p>
+</div>

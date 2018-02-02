@@ -6,3 +6,11 @@
 export const environment = {
   production: false
 };
+
+export const AWS_ENV = {
+  region: 'YOUR_REGION',
+  s3: {
+    apiVersion: 'YOUR_VERSION',
+    Bucket: 'YOUR_BACKET',
+  },
+};
